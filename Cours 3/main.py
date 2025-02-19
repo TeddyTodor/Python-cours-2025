@@ -62,6 +62,7 @@ def task4 () :
 # Task 5 - Using a package and creating a pie chart
 
 def task5 () :
+    
     def piechart (size : int, lab : str) :
         plt.pie(size, labels = lab, autopct= '%.2f%%')
         plt.show()
@@ -85,3 +86,18 @@ def task5 () :
         data.append(s)
 
     piechart(data, games)
+
+# Task 6 - Body fat percentage calculator
+
+def task6 () : 
+    def bmi( weight, height) :
+        m = height / 100
+        h = m*m
+        bmi = round( weight/2, 2)
+        return bmi
+
+    w = int(input("What is your weight ? "))
+    h = int(input("What is your height ? "))
+
+    eval = bmi(w, h)
+    print(f"Your body mass index is : {eval}")
